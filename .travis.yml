@@ -1,3 +1,15 @@
+os:
+ - windows
+ - linux
+ - osx
 language: rust
 script:
  - cargo build --release
+deploy:
+ provider: releases
+ api_key:
+  secure: "c7Jyj8BmSxydzhWYlaHkVTaer9H69vBqrS/Eow9y2/8RDas0Yh6MQBY+Pgh4G6UXUhqPugooBvp3/1NGH9p+t5lUPQW4Mckjre/ydQqcgVvWxWYLPQRfjzcfzk5VnviFJUN/N8N+QgqD3MV7GBt+MnusYs0ZdJ57zJtaxExmfavcdrWqagFpwkbVIYYSB0kzQTIoSQu7NlnUu/uTOdAC3NbV4PNM7phy7ybkSCSR1NyE5TPhHSJKM2q5CAhyms9bUr4AO2yKyXejQfpnFXNKR1vYUj+coSWzU84tH1KLWNOA5urcfU7EccI/w0xUWwKKC0qYuK5+xEmdQZufQqaYTlE19vNxL/eXgxjpVE8So04N3Sfh+Lkz1KdCr/zU/Utgz0mrq3NrxXJ4zkS4R/xwYC1+XxLrGP0iLrC4wsfs/ElONaSx8Z1o42+3pjSMJ0RwoAC4JVDicSMwuHwteyVP9Rzww7LKccbXWlda/9j63rQ36D6uki/lBhBAy0neVy1oOH8+iExwMZtB2OxEXvlWde1AhMAib6pQN1vcMQo0iAKP+sbGoZ/UM/7+cY5QcyX6h6Dkd/fpLDqSN2NhgvLqjckhX/1d2a+I9BaJ65JH0ytasALzUvFSKS6yWSHTAmJMSteyY+WL11wYMvm1DH6hGswCxLslFUIIy1lGN2yy93U="
+ file: "*"
+ skip_cleanup: true
+ on:
+  tags: true
