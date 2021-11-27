@@ -12,3 +12,5 @@ deploy:
  file_glob: true
  file: "target/release/*"
  skip_cleanup: true
+ on:
+  branch: main
